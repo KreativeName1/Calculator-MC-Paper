@@ -23,8 +23,7 @@ public final class Calculator extends JavaPlugin implements CommandExecutor, Tab
         this.getCommand("coord").setExecutor(this);
         this.getCommand("distance").setExecutor(this);
         this.getCommand("stack").setExecutor(this);
-        
-        // Register tab completers
+
         this.getCommand("calc").setTabCompleter(this);
         this.getCommand("coord").setTabCompleter(this);
         this.getCommand("distance").setTabCompleter(this);
@@ -71,9 +70,9 @@ public final class Calculator extends JavaPlugin implements CommandExecutor, Tab
         try {
             Expression expression = new ExpressionBuilder(input).build();
             double result = expression.evaluate();
-            player.sendMessage(ChatColor.GREEN + "Ergebnis: " + result);
+            player.sendMessage(ChatColor.GREEN + "Result: " + result);
         } catch (Exception e) {
-            player.sendMessage(ChatColor.RED + "Ungültige Eingabe.");
+            player.sendMessage(ChatColor.RED + "Invalid input.");
         }
         return true;
     }
@@ -107,10 +106,10 @@ public final class Calculator extends JavaPlugin implements CommandExecutor, Tab
                                   String.format("%.2f", y) + ", " + 
                                   String.format("%.2f", overworldZ));
             } else {
-                player.sendMessage(ChatColor.RED + " Unbekannte Dimension, bitte 'nether' oder 'overworld' angeben.");
+                player.sendMessage(ChatColor.RED + "Unknown dimension, please specify 'nether' or 'overworld'.");
             }
         } catch (NumberFormatException e) {
-            player.sendMessage(ChatColor.RED + "ungültige Koordinaten");
+            player.sendMessage(ChatColor.RED + "Invalid coordinates");
         }
         return true;
     }
@@ -135,10 +134,10 @@ public final class Calculator extends JavaPlugin implements CommandExecutor, Tab
                 Math.pow(z2 - z1, 2)
             );
             
-            player.sendMessage(ChatColor.GREEN + "Distanz: " +
+            player.sendMessage(ChatColor.GREEN + "Distance: " +
                               ChatColor.GOLD + String.format("%.2f", distance) + " blocks");
         } catch (NumberFormatException e) {
-            player.sendMessage(ChatColor.RED + "Ungültige Koordinaten");
+            player.sendMessage(ChatColor.RED + "Invalid coordinates");
         }
         return true;
     }
