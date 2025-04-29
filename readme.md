@@ -31,7 +31,6 @@ My first plugin that i quickly made for different calculations. More will be add
 
 - **Quality of Life Features**
     - Tab completion for all commands
-    - Command aliases for convenience
     - Colored output for better readability
 
 ## Requirements
