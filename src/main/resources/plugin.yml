@@ -1,0 +1,25 @@
+name: Calculator
+version: '1.0-SNAPSHOT'
+main: org.KreativeName.calculator.Calculator
+api-version: '1.21'
+description: A simple chat calculator using exp4j
+
+commands:
+  calc:
+    description: Calculates a mathematical expression
+    usage: /calc <expression>
+  coord:
+    description: Converts coordinates between nether and overworld
+    usage: /coord [nether|overworld] <x> <y> <z>
+    aliases: [coordinates]
+  distance:
+    description: Calculates the distance between two 3D points
+    usage: /distance <x1> <y1> <z1> <x2> <y2> <z2>
+    aliases: [dist]
+  stack:
+    description: Converts between stacks and items
+    usage: |
+      /stack toStacks <items> [stackSize]
+      /stack toItems <stacks> [stackSize]
+      /stack toItems <stacks> <remainder> [stackSize]
+    aliases: [stacks]
