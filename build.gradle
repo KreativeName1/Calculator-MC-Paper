@@ -34,7 +34,7 @@ tasks {
     shadowJar {
         archiveBaseName.set('Calculator')
         archiveClassifier.set('')
-        archiveVersion.set('1.0-SNAPSHOT')
+        archiveVersion.set('1.1')
     }
 }
 
