@@ -33,6 +33,10 @@ public class CoordCommand extends Command {
             if (dimension.equals("tonether")) {
                 double netherX = x / 8;
                 double netherZ = z / 8;
+                player.sendMessage(ChatColor.GREEN + "Original coordinates: " +
+                        ChatColor.GOLD + String.format("%.2f", x) + ", " +
+                        String.format("%.2f", y) + ", " +
+                        String.format("%.2f", z));
                 player.sendMessage(ChatColor.GREEN + "Nether coordinates: " +
                         ChatColor.GOLD + String.format("%.2f", netherX) + ", " +
                         String.format("%.2f", y) + ", " +
@@ -40,6 +44,10 @@ public class CoordCommand extends Command {
             } else if (dimension.equals("tooverworld")) {
                 double overworldX = x * 8;
                 double overworldZ = z * 8;
+                player.sendMessage(ChatColor.GREEN + "Original coordinates: " +
+                        ChatColor.GOLD + String.format("%.2f", x) + ", " +
+                        String.format("%.2f", y) + ", " +
+                        String.format("%.2f", z));
                 player.sendMessage(ChatColor.GREEN + "Overworld coordinates: " +
                         ChatColor.GOLD + String.format("%.2f", overworldX) + ", " +
                         String.format("%.2f", y) + ", " +

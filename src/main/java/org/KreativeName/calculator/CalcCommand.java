@@ -30,7 +30,9 @@ public class CalcCommand extends Command {
         try {
             Expression expression = new ExpressionBuilder(input).build();
             double result = expression.evaluate();
-            player.sendMessage(ChatColor.GREEN + "Result: " + result);
+            player.sendMessage(
+                    ChatColor.GOLD + input + ChatColor.GREEN + " = " +
+                    ChatColor.GOLD + result);
         } catch (Exception e) {
             player.sendMessage(ChatColor.RED + "Invalid input.");
         }
