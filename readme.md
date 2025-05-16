@@ -17,12 +17,12 @@ My first plugin that i quickly made for different calculations. More will be add
     - Preserves Y-coordinate values
     - Tab completion suggests current player coordinates
 
-- **Distance Calculator** (`/distance`)
+- **Distance Calculator** (`/dist`)
     - Calculate the exact Euclidean distance between two 3D points
     - Useful for planning builds and travel routes
     - Tab completion suggests current player coordinates
 
-- **Stack Calculator** (`/stack`)
+- **Stack Calculator** (`/stacks`)
     - Convert between item stacks and individual items
     - Support for custom stack sizes (default: 64)
     - Calculate total items from stacks and remainder
